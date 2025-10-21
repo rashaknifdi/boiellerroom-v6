@@ -8,7 +8,7 @@ public class ProductCatalog {
     private List<Product> productList = new LinkedList<>();
 
     public ProductCatalog() {
-        productList.add(new Product("id", 30));
+
     }
 
     public double priceUsd(String sku) {
@@ -21,5 +21,14 @@ public class ProductCatalog {
         return 0.0;
     }
 
-    public void addProduct(Product p) {}
+    public void addProduct(Product p) {
+        productList.add(p);
+    }
+    public int  getProductCount() {
+        return productList.size();
+    }
+
+    public List<Product> getProductList() {
+        return productList;
+    }
 }

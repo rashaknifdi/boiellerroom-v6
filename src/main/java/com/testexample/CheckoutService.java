@@ -1,11 +1,27 @@
 package com.testexample;
 
-public class CheckoutService {
+import java.util.LinkedList;
+import java.util.List;
+
+public class CheckoutService implements ExchangeRateClient {
+
+    @Override
+    public double getRate(String usd, String SEK) {
+        return 9.43;
+    }
+    private List<Product> products = new LinkedList();
+
     double calculateTotalPrice() {
-        return 0.0 ;
+        double totalPrice = products.stream().su
+                ;
+
 
     }
     public void exchangeRateToSek() {
 
+    }
+
+    public List<Product> getProducts() {
+        return products;
     }
 }

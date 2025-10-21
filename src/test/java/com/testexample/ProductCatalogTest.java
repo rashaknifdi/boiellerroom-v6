@@ -15,7 +15,12 @@ public class ProductCatalogTest {
 
     }
     @Test
-    void addProduct() {
+    void addProductToList() {
+        ProductCatalog productCatalog = new ProductCatalog();
+        Product p1 = new Product("p1", 100.0);
+        productCatalog.addProduct(p1);
+        assertEquals(1,productCatalog.getProductCount());
+
 
     }
 
