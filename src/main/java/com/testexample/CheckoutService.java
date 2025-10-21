@@ -9,11 +9,14 @@ public class CheckoutService implements ExchangeRateClient {
     public double getRate(String usd, String SEK) {
         return 9.43;
     }
-    private List<Product> products = new LinkedList();
 
-    double calculateTotalPrice() {
-        double totalPrice = products.stream().su
-                ;
+    double calculateTotalPrice(List<Product> products) {
+
+        double totalPrice = 0;
+        for (Product product : products) {
+            totalPrice += product.getUsaPrice();
+        }
+        return totalPrice;
 
 
     }
@@ -21,7 +24,5 @@ public class CheckoutService implements ExchangeRateClient {
 
     }
 
-    public List<Product> getProducts() {
-        return products;
-    }
+
 }
